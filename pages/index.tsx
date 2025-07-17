@@ -32,7 +32,7 @@ export default function IndexPage() {
               radius: "full",
               variant: "shadow",
             })}
-            href={siteConfig.links.docs}
+            href={"/"}
           >
             Documentation
           </Link>
