@@ -5,7 +5,7 @@ import { button as buttonStyles } from "@heroui/theme";
 
 import { siteConfig } from "@/config/site";
 import { title, subtitle } from "@/components/primitives";
-import { GithubIcon } from "@/components/icons";
+import {BlogIcon, GithubIcon} from "@/components/icons";
 import DefaultLayout from "@/layouts/default";
 
 export default function IndexPage() {
@@ -13,28 +13,33 @@ export default function IndexPage() {
     <DefaultLayout>
       <section className="flex flex-col items-center justify-center gap-4 py-8 md:py-10">
         <div className="inline-block max-w-xl text-center justify-center">
-          <span className={title()}>Make&nbsp;</span>
-          <span className={title({ color: "violet" })}>beautiful&nbsp;</span>
+
+          <Link href="#" className="hover:opacity-75 hover:scale-105 transition-all duration-300 text-current">
+            <span className={title()}>Live&nbsp;</span>
+            <span className={title({color: "red"})}>hardcore&nbsp;</span>
+          </Link>
+          <br/>
+          <Link href="#" className="hover:opacity-75 hover:scale-105 transition-all duration-300 text-current">
+            <span className={title()}>Build&nbsp;</span>
+            <span className={title({color: "blue"})}>software&nbsp;</span>
+          </Link>
           <br />
-          <span className={title()}>
-            websites regardless of your design experience.
-          </span>
-          <div className={subtitle({ class: "mt-4" })}>
-            Beautiful, fast and modern React UI library.
-          </div>
+          <p className={subtitle()}>
+            Forging success in career, training and life through strength, discipline and relentless effort.
+          </p>
         </div>
 
         <div className="flex gap-3">
           <Link
-            isExternal
             className={buttonStyles({
-              color: "primary",
+              // color: "primary",
               radius: "full",
-              variant: "shadow",
+              variant: "bordered",
             })}
-            href={"/"}
+            href={"/blog"}
           >
-            Documentation
+            <BlogIcon size={20} />
+            Blog
           </Link>
           <Link
             isExternal
