@@ -7,6 +7,7 @@ import {
   NavbarItem,
   NavbarMenuItem,
 } from "@heroui/navbar";
+import Image from "next/image";
 import { Kbd } from "@heroui/kbd";
 import { Link } from "@heroui/link";
 import { Input } from "@heroui/input";
@@ -49,7 +50,7 @@ export const Navbar = () => {
       <NavbarContent className="basis-1/5 sm:basis-full" justify="start">
         <NavbarBrand className="gap-3 max-w-fit">
           <NextLink className="flex justify-start items-center gap-1" href="/">
-            <p className="font-bold text-inherit">Filip Tvrdoň</p>
+              <Image src="/ft3.png" alt="Filip Tvrdoň" width={100} height={100} className="hover:opacity-75 hover:scale-105 transition-all duration-300 text-current"/>
           </NextLink>
         </NavbarBrand>
         <div className="hidden lg:flex gap-4 justify-start ml-2">

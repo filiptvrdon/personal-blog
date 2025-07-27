@@ -17,20 +17,23 @@ interface NotionPageProps {
 }
 
 const NotionPage: FC<NotionPageProps> = ({ recordMap, rootPageId }) => {
+	console.log("RECORD MAP", recordMap);
 	return (
 		<NotionRenderer
 			recordMap={recordMap}
 			fullPage={true}
-			darkMode={false}
+			className={"notion-custom"}
+			darkMode={true}
 			rootPageId={rootPageId}
 			previewImages={true}
-			showCollectionViewDropdown={false}
-			showTableOfContents={true}
+			showCollectionViewDropdown={true}
+			showTableOfContents={false}
 			minTableOfContentsItems={3}
-			defaultPageIcon="📄"
+			defaultPageIcon=""
 			defaultPageCover=""
 			defaultPageCoverPosition={0.5}
 			mapPageUrl={(pageId) => `/notion/${pageId}`}
+			disableHeader={true}
 			components={{
 				// You can customize components here
 				// Code: ({ block, defaultProps }) => (

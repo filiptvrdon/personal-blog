@@ -30,7 +30,7 @@ export default function BlogPostPage({ recordMap, pageId, title }: BlogPostPageP
 
   return (
     <DefaultLayout>
-      <div className="max-w-5xl mx-auto px-4 py-8">
+      <div className="max-w-5xl mx-auto px-4 py-8" style={{ backgroundColor: "black" }}>
         <NotionPage recordMap={recordMap} rootPageId={pageId} />
       </div>
     </DefaultLayout>
